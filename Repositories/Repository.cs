@@ -31,6 +31,11 @@ namespace Biblioteca.Repositories
         public void Update(T entity)
         {
             var exisitingEntity = GetById( (int)entity.GetType().GetProperty("Id").GetValue(entity));
+            if (exisitingEntity != null)
+            {
+                var index = _data.IndexOf(exisitingEntity);
+                _data[index] = entity;
+            }
         }
     }
 }

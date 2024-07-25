@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        // Aqui falta un atributo 
+        public DateTime BirthDate { get; set; }
     }
 }
